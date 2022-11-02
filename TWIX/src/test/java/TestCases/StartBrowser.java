@@ -9,9 +9,14 @@ public class StartBrowser {
 	
 	public static void main(String[] args) throws InterruptedException {
 		
-		driver = fun_startBrowser("https://salesbuzzsandbox.bi-technologies.net/FineUIUAT/#/login");
+		driver = fun_startBrowser("https://bifmcg.bi-technologies.net/uiuat/#/login");
 		Thread.sleep(3000);
 		LoginTC.Login(driver);
+		Thread.sleep(3000);
+	//	QuestionsTC.AddNewQuestion(driver);
+		EmployeeDefinitionTC.AccessEmployeeDefintion(driver);
+		Thread.sleep(3000);
+		EmployeeDefinitionTC.AddNewEmplpyee(driver);
 		Thread.sleep(3000);
 		closeBrowser();
 			
